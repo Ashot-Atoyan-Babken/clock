@@ -113,3 +113,60 @@ body {
    border-radius: 50%;
 
 }
+
+.wrapper {
+   margin-top: 65vh;
+   height: 100px;
+   width: 360px;
+   position: relative;
+   border-radius: 10px;
+   cursor: default;
+   animation: anima 1.5s linear infinite;
+}
+
+.wrapper .display,
+.wrapper span {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.wrapper .display {
+   z-index: 999;
+   height: 85px;
+   width: 345px;
+   background: #1b1b1b;
+   border-radius: 6px;
+   text-align: center;
+}
+
+.time {
+   line-height: 85px;
+   color: #fff;
+   font-size: 50px;
+   font-weight: 700;
+   letter-spacing: 1px;
+   animation: anima 1.5s linear infinite;
+}
+
+@keyframes anima {
+   100% {
+      filter: hue-rotate(360deg);
+   }
+}
+
+span {
+   height: 100%;
+   width: 100%;
+   border-radius: 10px;
+   background: inherit;
+}
+
+.wrapper span:first-child {
+   filter: blur(7px);
+}
+
+.wrapper span:last-child {
+   filter: blur(20px);
+}
